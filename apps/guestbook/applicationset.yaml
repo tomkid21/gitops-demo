@@ -1,0 +1,23 @@
+﻿apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook-fanout
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - env: prod
+          - env: staging
+  template:
+    metadata:
+      name: '{{env}}-guestbook'
+    spec:
+      project: default
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: guestbook-{{env}}
+      source:
+        repoURL: https://github.com/tomkid21/gitops-demo.git
+        path: guestbook
+        targetRevision: main
