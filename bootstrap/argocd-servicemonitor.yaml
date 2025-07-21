@@ -4,11 +4,6 @@ metadata:
   name: argocd
   namespace: monitoring
 spec:
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: argocd-server
-  namespaceSelector:
-    matchNames: ['argocd']
-  endpoints:
-    - port: metrics
-      path: /metrics
+  selector: {matchLabels: {app: argocd-metrics}}
+  namespaceSelector: {matchNames: ["argocd"]}
+  endpoints: [{port: metrics, path: /metrics, interval: 15s}]
