@@ -19,5 +19,5 @@ spec:
         namespace: guestbook-{{env}}
       source:
         repoURL: https://github.com/tomkid21/gitops-demo.git
-        path: apps/guestbook
+        path: manifests/apps/guestbook
         targetRevision: main

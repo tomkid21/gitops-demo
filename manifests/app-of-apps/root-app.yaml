@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/tomkid21/gitops-demo.git
-    path: apps
+    path: manifests/apps
     targetRevision: main
   syncPolicy:
     automated:
