@@ -1,9 +1,0 @@
-﻿apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: argocd
-  namespace: monitoring
-spec:
-  selector: {matchLabels: {app: argocd-metrics}}
-  namespaceSelector: {matchNames: ["argocd"]}
-  endpoints: [{port: metrics, path: /metrics, interval: 15s}]
