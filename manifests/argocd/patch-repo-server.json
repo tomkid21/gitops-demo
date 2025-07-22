@@ -1,0 +1,10 @@
+﻿[
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/initContainers/0/command",
+    "value": [
+      "sh","-c",
+      "mkdir -p /custom-helm && curl -sSL https://get.helm.sh/helm-v3.10.0-linux-amd64.tar.gz | tar -xz -C /custom-helm linux-amd64/helm --strip-components=1 && chmod +x /custom-helm/helm"
+    ]
+  }
+]

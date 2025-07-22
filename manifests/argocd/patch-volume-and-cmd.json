@@ -1,0 +1,17 @@
+﻿[
+  {
+    "op": "add",
+    "path": "/spec/template/spec/volumes/-",
+    "value": { "name": "custom-helm", "emptyDir": {} }
+  },
+  {
+    "op": "add",
+    "path": "/spec/template/spec/containers/0/volumeMounts/-",
+    "value": { "name": "custom-helm", "mountPath": "/custom-helm" }
+  },
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/containers/0/command",
+    "value": [ "/custom-helm/helm", "repo", "serve" ]
+  }
+]
