@@ -1,0 +1,4 @@
+﻿kubeStateMetrics:
+  enabled: false
+alertmanager:
+  enabled: false
