@@ -1,0 +1,97 @@
+=== C:\Users\seunm\gitops-demo\.gitattributes ===
+* text=auto eol=lf
+
+=== C:\Users\seunm\gitops-demo\repo-structure.txt ===
+Folder PATH listing for volume Windows
+Volume serial number is F2A6-E92F
+C:\USERS\SEUNM\GITOPS-DEMO
+|   .gitattributes
+|   repo-structure.txt
+|   
++---apps
+|   \---guestbook
+|           deployment.yaml
+|           namespace-prod.yaml
+|           namespace-staging.yaml
+|           service.yaml
+|           
+\---manifests
+    +---app-of-apps
+    |       prod-guestbook-app.yaml
+    |       root-app.yaml
+    |       staging-guestbook-app.yaml
+    |       
+    +---argocd
+    |   |   patch-initcontainer.json
+    |   |   patch-repo-server-merge.yaml
+    |   |   patch-volume-and-cmd.json
+    |   |   
+    |   \---helm
+    |           helm.exe
+    |           
+    +---bootstrap
+    |       argocd-install.yaml
+    |       argocd-servicemonitor.yaml
+    |       
+    +---grafana
+    |   |   grafana-datasources-cm.yaml
+    |   |   patch-grafana-datasource.yaml
+    |   |   
+    |   +---dashboards
+    |   |       argocd-dashboard.json
+    |   |       
+    |   \---provisioning
+    |       +---dashboards
+    |       |       argocd.yaml
+    |       |       
+    |       \---datasources
+    |               prometheus.yaml
+    |               
+    \---prometheus
+            argocd-down-alert.yaml
+            servicemonitor-argocd.yaml
+            values.yaml
+            
+
+=== C:\Users\seunm\gitops-demo\apps\guestbook\deployment.yaml ===
+
+=== C:\Users\seunm\gitops-demo\apps\guestbook\namespace-prod.yaml ===
+
+=== C:\Users\seunm\gitops-demo\apps\guestbook\namespace-staging.yaml ===
+
+=== C:\Users\seunm\gitops-demo\apps\guestbook\service.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\app-of-apps\prod-guestbook-app.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\app-of-apps\root-app.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\app-of-apps\staging-guestbook-app.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\argocd\patch-initcontainer.json ===
+
+=== C:\Users\seunm\gitops-demo\manifests\argocd\patch-repo-server-merge.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\argocd\patch-volume-and-cmd.json ===
+
+=== C:\Users\seunm\gitops-demo\manifests\argocd\helm\helm.exe ===
+
+=== C:\Users\seunm\gitops-demo\manifests\bootstrap\argocd-install.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\bootstrap\argocd-servicemonitor.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\grafana\grafana-datasources-cm.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\grafana\patch-grafana-datasource.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\grafana\dashboards\argocd-dashboard.json ===
+
+=== C:\Users\seunm\gitops-demo\manifests\grafana\provisioning\dashboards\argocd.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\grafana\provisioning\datasources\prometheus.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\prometheus\argocd-down-alert.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\prometheus\servicemonitor-argocd.yaml ===
+
+=== C:\Users\seunm\gitops-demo\manifests\prometheus\values.yaml ===
+
