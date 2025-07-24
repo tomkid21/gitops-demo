@@ -1,7 +1,7 @@
 ﻿apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: staging-guestbook
+  name: prod-guestbook
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: apps/guestbook
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook-staging
+    namespace: guestbook-prod
   syncPolicy:
     automated:
       prune: true
