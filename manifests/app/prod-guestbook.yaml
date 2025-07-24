@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/tomkid21/gitops-demo.git
     targetRevision: main
-    path: apps/guestbook
+    path: apps/guestbook-prod
   destination:
     server: https://kubernetes.default.svc
     namespace: guestbook-prod
