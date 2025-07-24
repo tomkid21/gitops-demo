@@ -1,0 +1,31 @@
+﻿apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook-set
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - name: prod
+            namespace: prod
+            path: apps/guestbook
+          - name: staging
+            namespace: staging
+            path: apps/guestbook
+  template:
+    metadata:
+      name: '{{name}}-guestbook'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/tomkid21/gitops-demo.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
